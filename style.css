@@ -1,0 +1,339 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: rgb(121, 79, 69);
+}
+h2 {
+    font-size: 40px;
+    margin: 0px 0px 30px 0px;
+    color: rgb(255, 255, 255);
+}
+p {
+    color: rgb(255, 255, 255);
+}
+li {
+    color: rgb(255, 255, 255);
+}
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+}
+.container {
+    max-width: 1400px;
+    padding: 0px 30px;
+    margin: 0px auto;
+}
+
+/* animatiom for text */
+._anim-show {
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+} 
+._anim-show._active,
+._active ._anim-show {
+    opacity: 1;
+    transform: translate(0px, 0px);
+}
+
+/* fullscreen */
+.fillscreen {
+    position: relative;
+    max-height: 100vh;
+}
+.fillscreen__content {
+    z-index: 2;
+    position: relative;
+    max-width: 1400px;
+    margin: 0px auto;
+    min-height: 100vh;
+    display: flex;
+    padding: 0px 0px 20vh 0px;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+}
+.fillscreen__title {
+    font-size: 70px;
+    margin: 0px 0px 20px 20px;
+    z-index: 3;
+    color: rgb(255, 255, 255);
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    text-shadow: 0px 0px 10px black ;
+}
+.fillscreen__title._active {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: all 0.8s ease 0.3s;
+}
+.fillscreen__text {
+    font-size: 40px;
+    line-height: 35px;
+    max-width: 50%;
+    margin: 0px 0px 100px 20px;
+    z-index: 3;
+    color: rgb(255, 255, 255);
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    text-shadow: 0px 0px 10px black ;
+}
+.fillscreen__text._active {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: all 0.8s ease 0.6s;
+}
+.fillscreen__image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+}
+.fillscreen__image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+/* page */
+.page {
+    background: rgb(51, 51, 51);
+    position: relative;
+    z-index: 2;
+}
+.text {
+    padding: 70px;
+    font-size: 24px;
+    line-height: 40px;
+}
+.text__item {
+    overflow: hidden;
+    margin: 0px 0px 30px 0px;
+}
+.text__item:last-child {
+    margin: 0;
+}
+
+/* moments */
+.moments {
+    background: rgb(121, 79, 69);
+    padding: 70px 70px;
+}
+.moments__items {
+    display: flex;
+    margin: 0px -20px;
+}
+.moments__item {
+    flex: 0 1 25%;
+    padding: 0px 20px;
+    text-align: center;
+}
+.moments__image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    margin: 0px 0px 10px 0px;
+    transform: scale(0);
+    transition: all 0.8s ease 0s;
+}
+.moments__image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+.moments__text {
+    font-size: 25px;
+    line-height: 35px;
+    color: rgb(255, 255, 255);
+    transform: translate(0px, 50%);
+    opacity: 0;
+    transition: all 0.3s ease 0.6s;
+}
+.moments__item._active .moments__image {
+    transform: scale(1);
+    transition: all 1s ease 0.2s;
+}
+.moments__item._active .moments__text {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: all 0.8s ease 1s;
+}
+
+/* list */
+.list {
+    padding: 70px 70px;
+}
+.list__container {
+    overflow: hidden;
+}
+.list__item {
+    font-size: 25px;
+    line-height: 35px;
+}
+.list__item li {
+    list-style: none;
+    position: relative;
+    padding: 0px 0px 0px 40px;
+    margin: 0px 0px 20px 0px;
+    transform: translate(-120%, 0px);
+    transition: all 0.3s ease 0s;
+}
+.list__item._active li:nth-child(1) {
+    transition: all 0.8s ease 0s;
+}
+.list__item._active li:nth-child(2) {
+    transition: all 0.8s ease 0.2s;
+}
+.list__item._active li:nth-child(3) {
+    transition: all 0.8s ease 0.4s;
+}
+.list__item._active li:nth-child(4) {
+    transition: all 0.8s ease 0.6s;
+}
+.list__item._active li:nth-child(5) {
+    transition: all 0.8s ease 0.8s;
+}
+.list__item._active li:nth-child(6) {
+    transition: all 0.8s ease 1s;
+}
+.list__item._active li:nth-child(7) {
+    transition: all 0.8s ease 1.2s;
+}
+.list__item._active li:nth-child(8) {
+    transition: all 0.8s ease 1.4s;
+}
+.list__item._active li:nth-child(9) {
+    transition: all 0.8s ease 1.6s;
+}
+.list__item._active li:nth-child(10) {
+    transition: all 0.8s ease 1.8s;
+}
+.list__item._active li {
+    transform: translate(0px, 0px);
+}
+.list__item li::before {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    content: '';
+    background: rgb(119, 96, 141);
+    position: absolute;
+    left: 0;
+    top: 8px;
+}
+
+@media (max-width: 1024px) {
+    .text {
+        padding: 60px;
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .moments__items {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0px -20px;
+    }
+    .moments__item {
+        flex-wrap: wrap;
+        flex: 1 1 25%;
+    }
+    .moments__text {
+        font-size: 20px;
+        line-height: 25px;
+        margin: 0px 0px 30px 0px;
+    }
+    .list {
+        padding: 70px 30px;
+    }
+    .list__item {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .list__item li {
+        padding: 0px 0px 0px 25px;
+        transform: translate(-130%, 0px);
+    }
+    .list__item li::before {
+        width: 15px;
+        height: 15px;
+        top: 5px;
+    }
+}
+@media(max-width: 768px) {
+    h2 {
+        font-size: 30px;
+        margin: 0px 0px 20px 0px;
+    }
+    .fillscreen__image img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+    .container {
+        padding: 0px 10px;
+    }
+    .fillscreen__title {
+        font-size: 40px;
+        margin: 0px 0px 15px 20px;
+    }
+    .fillscreen__text {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .text {
+        padding: 30px 10px;
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .text__item {
+        margin: 0px 0px 15px 0px;
+    }
+    .moments {
+        padding: 30px 10px;
+    }
+    .moments__text {
+        font-size: 20px;
+        line-height: 20px;
+        margin: 0px 0px 30px 0px;
+    }
+    .list {
+        padding: 30px 10px;
+    }
+    .list__item {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .list__item li {
+        padding: 0px 0px 0px 20px;
+        transform: translate(-200%, 0px);
+    }
+    .list__item li::before {
+        width: 10px;
+        height: 10px;
+        top: 5px;
+    }
+    .list__items {
+        padding: 0px 0px 0px 0px;
+    }
+}
